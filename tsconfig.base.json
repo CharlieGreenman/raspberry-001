@@ -20,6 +20,9 @@
     "paths": {
       "@raspberry-001/common/styles": [
         "libs/common/styles/src/index.ts"
+      ],
+      "@raspberry-001/common/ui": [
+        "libs/common/ui/src/index.ts"
       ]
     }
   },
