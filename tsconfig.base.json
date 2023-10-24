@@ -23,6 +23,9 @@
       ],
       "@raspberry-001/common/ui": [
         "libs/common/ui/src/index.ts"
+      ],
+      "@raspberry-001/home": [
+        "libs/home/src/index.ts"
       ]
     }
   },
