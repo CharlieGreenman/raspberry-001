@@ -1,0 +1,29 @@
+{
+  "name": "raspberry-001-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/raspberry-001-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/raspberry-001-e2e/cypress.json",
+        "devServerTarget": "raspberry-001:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "raspberry-001:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/raspberry-001-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["raspberry-001"]
+}
