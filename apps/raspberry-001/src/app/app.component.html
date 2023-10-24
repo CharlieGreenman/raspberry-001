@@ -1,7 +1,21 @@
 <raspberry-001-global-header
-  (sideNavToggle)="sideNavToggle()"
+  (sidenavtoggle)="sideNavToggle()"
 ></raspberry-001-global-header>
 <div class="wrapper">
-  <div class="container"></div>
+  <div class="container">
+    <raspberry-001-global-sidenav [opened]="sideNavOpen">
+      <mat-nav-list sidenav="">
+        <a
+          mat-list-item=""
+          routerlinkactive="active-link"
+          routerlink="/"
+          (click)="sideNavToggle()"
+        >
+          <span class="App__sidenav-text">Home</span>
+        </a>
+      </mat-nav-list>
+      <router-outlet></router-outlet>
+    </raspberry-001-global-sidenav>
+  </div>
 </div>
 <raspberry-001-global-footer> </raspberry-001-global-footer>
